@@ -26,7 +26,6 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-import("//build/toolchain/shared.gni")
 import("//packages/package.gni")
 
 # Lets callers do '#include <sqlite3.h>'
@@ -34,7 +33,7 @@ config("sqlite_config") {
   include_dirs = [ "." ]
 }
 
-fuchsia_shared_library("sqlite") {
+shared_library("sqlite") {
   sources = [
     "sqlite3.c",
     "sqlite3.h",
