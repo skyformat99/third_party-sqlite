@@ -75,6 +75,7 @@ executable("shell") {
 
 package("package") {
   package_name = "sqlite"
+  system_image = true
 
   deps = [
     ":shell",
